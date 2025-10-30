@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Card OCR (LLM + Camera)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Business Card OCR (LLM + Camera)</h1>
+    <p>Upload a photo or capture one with your camera.</p>
+
+    <input id="imageInput" type="file" accept="image/*" capture="environment">
+    <button id="cameraBtn">📷 Open Camera<sk/button>
+
+    <div id="cameraContainer">
+      <video id="camera" autoplay playsinline></video>
+      <button id="captureBtn">🎯 Capture Photo</button>
+      <button id="closeCameraBtn" class="close-btn">Close Camera</button>
+      <canvas id="photoCanvas" style="display:none;"></canvas>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="formSection" style="display:none;">
+      <div class="field"><label>Name</label><input id="name" type="text"></div>
+      <div class="field"><label>Phone</label><input id="phone" type="tel"></div>
+      <div class="field"><label>Email</label><input id="email" type="email"></div>
+      <div class="field"><label>Address</label><input id="address" type="text"></div>
+      <div class="field"><label>Company</label><input id="company" type="text"></div>
+      <button id="downloadVCard">Generate vCard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
